@@ -22,6 +22,11 @@ func main() {
 		os.Exit(-1)
 	}
 
+	if filepath == "" {
+		fmt.Printf("Error: no file entered :(")
+		os.Exit(-1)
+	}
+
 	// Use the file to start calculating the hash
 	file, err := os.Open(filepath)
 
